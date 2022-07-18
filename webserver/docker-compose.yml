@@ -1,0 +1,19 @@
+version: '3'
+services:
+  node:
+    container_name: letstego-webserver
+    restart: always
+    build: .
+    ports:
+      - '3000:3000'
+    env:
+       - NODE_ENV=development
+       - aws_bucket=elasticbeanstalk-eu-central-1-476648829645
+       - aws_secretAccessKey=g2F4KzwKAtSzSjHYODbnrq1NWuEUVV4ipoZFPP1w
+       - aws_accessKeyId=AKIAING4GMRQKO4FYGBQ
+       - aws_region=eu-central-1
+       - mongodb_user=hunor
+       - mongodb_password=8RrIfU8fpimiSN4P
+       - mongodb_host=cluster0-nhauj.mongodb.net/letstego?retryWrites=true
+  
+      
